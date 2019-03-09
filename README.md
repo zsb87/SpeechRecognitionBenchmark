@@ -5,7 +5,8 @@ A comprehensive evaluation of currently existing Automatic Speech Recognition (A
 
 
 ## Noisy Audio Synthesis
-Python packages we used for noisy audio synthesis code are: docopt, pydub, numpy, os, fnmatch, shutil.
+Python packages we used for noisy audio synthesis code are: 'docopt', 'pydub', 'numpy', 'os', 'fnmatch', 'shutil'.
+
 Please make sure install all of them before running the code. 
 
 
