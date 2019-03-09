@@ -22,7 +22,7 @@ For example, `python make_noisy_dataset.py 'LibriSpeech/' '15 Free Ambient Sound
 
 You can adjust how much noise corrupted the audio file by adjusting SNR value in decibel scale. SNR means signal-to-noise ratio, and it is simply how much the audio is corrupted by the noise. 
 
-We included 15 noise files, which are free open sources, and you can also download [online](http://pbblogassets.s3.amazonaws.com/uploads/2016/09/15-Free-Ambient-Sound-Effects.zip).
+We used some free open source noise files, which was downloaded [here](http://pbblogassets.s3.amazonaws.com/uploads/2016/09/15-Free-Ambient-Sound-Effects.zip). However, you can use any other noise files other than these.
 
 
 ## DeepSpeech Model
