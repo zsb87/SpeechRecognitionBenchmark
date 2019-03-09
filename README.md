@@ -19,9 +19,8 @@ pip install docopt pydub numpy os fnmatch shutil
 The usage of the noisy audio synthesis code on commnad-line is:
 ```
 python make_noisy_dataset.py <audio_dataset_dir> <noise_dataset_dir> <destination_dir> <file_type> <snr>
-
-ex. python make_noisy_dataset.py 'LibriSpeech/' '15 Free Ambient Sound Effects/Busy City Street.mp3' './' 'wav' 0
 ```
+For example, `python make_noisy_dataset.py 'LibriSpeech/' '15 Free Ambient Sound Effects/Busy City Street.mp3' './' 'wav' 0`
 
 
 ## DeepSpeech Model
