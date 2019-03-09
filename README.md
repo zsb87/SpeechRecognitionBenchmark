@@ -5,9 +5,23 @@ A comprehensive evaluation of currently existing Automatic Speech Recognition (A
 
 
 ## Noisy Audio Synthesis
+We made a Python code that can duplicate audio dataset's folder tree structure and add noise onto audio files. 
+
 Python packages we used for noisy audio synthesis code are: `docopt`, `pydub`, `numpy`, `os`, `fnmatch`, `shutil`.
 
 Please make sure install all of them before running the code. 
+
+You can install them by running following line:
+```
+pip install docopt pydub numpy os fnmatch shutil
+```
+
+The usage of the noisy audio synthesis code on commnad-line is:
+```
+python make_noisy_dataset.py <audio_dataset_dir> <noise_dataset_dir> <destination_dir> <file_type> <snr>
+
+ex. python make_noisy_dataset.py 'LibriSpeech/' '15 Free Ambient Sound Effects/Busy City Street.mp3' './' 'wav' 0
+```
 
 
 ## DeepSpeech Model
