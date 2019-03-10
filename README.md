@@ -1,7 +1,6 @@
 # Speech Recognition Benchmark
 
-A comprehensive evaluation of currently existing Automatic Speech Recognition (ASR) systems.
-
+A comprehensive evaluation under different types and levels of environment noises using two currently existing Automatic Speech Recognition (ASR) systems.
 
 
 ## Noisy Audio Synthesis
