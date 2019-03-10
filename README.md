@@ -26,15 +26,22 @@ We used some free open source noise files, which were downloaded [here](http://p
 
 
 ## DeepSpeech Model
-Architecture from paper [Baidu's Deep Speech Paper](https://arxiv.org/abs/1412.5567). Framework implemented by Mozilla. We made the WER result implementation part.
+This is a wrapper of [DeepSpeech-Mozilla](https://github.com/mozilla/DeepSpeech). Architecture is from paper [Baidu's Deep Speech Paper](https://arxiv.org/abs/1412.5567). Framework is implemented by Mozilla. We use its speech recognition inference module and added the WER result part.
+
+Language model: KenLM
 
 ### Steps:
 1. Download .so file from [here](https://drive.google.com/file/d/1c2o3P9OY87S6vCpJO2KCKRQQAhOO_gHb/view?usp=sharing).
 2. Run `DeepSpeech-mozilla/batch_trans_xer.py`to generate transcripts from audio input and save in .txt files and then calculate the WER, CER and SER results from generated transcritps and labels.
 
 
-## Wav2Letter Model
-1. Run `result.py` to calculate the WER results from generated transcritps and labels.
+## wav2letter Model
+This is a wrapper of [wav2letter++](https://github.com/facebookresearch/wav2letter) model by Facebook AI Research. wav2letter++] is a fast open source speech processing toolkit from the Speech Team at Facebook AI Research. It is written entirely in C++ and uses the ArrayFire tensor library and the flashlight machine learning library for maximum efficiency. Our approach is detailed in this arXiv paper.
+
+Language model: KenLM
+### Steps:
+1. Run `Split.py` to extract and save the labels in correct format.
+2. Run `WER` to calculate the WER results from generated transcritps and labels.
 
 
 
