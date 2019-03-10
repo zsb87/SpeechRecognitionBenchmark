@@ -5,7 +5,7 @@ A comprehensive evaluation of currently existing Automatic Speech Recognition (A
 
 
 ## Noisy Audio Synthesis
-We made a Python code that can duplicate audio dataset's folder tree structure and add noise onto audio files and copy transcript files into the same location in the original folder. This kind of mimicking folder structure is essential for Wav2Letter because it only accept the folder structure of original LibriSpeech dataset.
+We made a Python code that can duplicate audio dataset's folder tree structure and add noise onto audio files. 
 
 Python packages we used for noisy audio synthesis code are: `docopt`, `pydub`, `numpy`, `os`, `fnmatch`, `shutil`.
 
@@ -26,7 +26,7 @@ We used some free open source noise files, which were downloaded [here](http://p
 
 
 ## DeepSpeech Model
-This is a wrapper of [DeepSpeech-Mozilla](https://github.com/mozilla/DeepSpeech). Architecture is from paper [Baidu's Deep Speech Paper](https://arxiv.org/abs/1412.5567). Framework is implemented by Mozilla. We use its speech recognition inference module and added the WER result part.
+This is a wrapper of [DeepSpeech-Mozilla](https://github.com/mozilla/DeepSpeech). Architecture is from paper [Baidu's Deep Speech Paper](https://arxiv.org/abs/1412.5567). Framework is implemented by Mozilla. We use its speech recognition inference module and implemented the WER result part.
 
 Decoder: CTC + language model beam search
 
@@ -34,17 +34,19 @@ Language model: KenLM
 
 ### Steps:
 1. Download .so file from [here](https://drive.google.com/file/d/1c2o3P9OY87S6vCpJO2KCKRQQAhOO_gHb/view?usp=sharing).
-2. Run `DeepSpeech-mozilla/batch_trans_xer.py`to generate transcripts from audio input and save in .txt files and then calculate the WER, CER and SER results from generated transcritps and labels.
+2. Install DeepSpeech with `pip3 install deepspeech`.
+3. Run `DeepSpeech-mozilla/batch_trans_xer.py`to generate transcripts from audio input and save in .txt files and then calculate the WER, CER and SER results from generated transcritps and labels.
 
 
 ## wav2letter Model
-This is a wrapper of [wav2letter++](https://github.com/facebookresearch/wav2letter) model by Facebook AI Research. wav2letter++ is a fast open source speech processing toolkit from the Speech Team at Facebook AI Research. It is written entirely in C++ and uses the ArrayFire tensor library and the flashlight machine learning library for maximum efficiency. Our approach is detailed in this arXiv paper.
+This is a wrapper of [wav2letter++](https://github.com/facebookresearch/wav2letter) model by Facebook AI Research. wav2letter++ is a fast open source speech processing toolkit from the Speech Team at Facebook AI Research. It is written entirely in C++ and uses the ArrayFire tensor library. Because there is some error in the pretrained model, we slightly modified the codes and trained it on the librispeech’s train-clean-100 dataset for 24 hours. Also we made the WER result implementation part.
 
 Decoder: CTC + language model beam search
 
-Language model: [3-gram LM](http://www.openslr.org/resources/11/3-gram.arpa.gz) trained from LibriSpeech corpus
+Language model: [3-gram LM](http://www.openslr.org/resources/11/3-gram.arpa.gz) trained from libriSpeech corpus
 
 ### Steps:
-1. Run `Split.py` to extract and save the labels in correct format.
-2. Run `WER` to calculate the WER results from generated transcritps and labels.
+1. Install wav2letter with docker using `sudo docker run --runtime=nvidia --rm -itd --ipc=host --name w2l wav2letter/wav2letter:cuda-latest`.
+2. Run `Split.py` to extract and save the labels in correct format.
+3. Run `WER` to calculate the WER results from generated transcritps and labels.
 
