@@ -5,7 +5,7 @@ A comprehensive evaluation of currently existing Automatic Speech Recognition (A
 
 
 ## Noisy Audio Synthesis
-We made a Python code that can duplicate audio dataset's folder tree structure and add noise onto audio files. 
+We made a Python code that can duplicate audio dataset's folder tree structure and add noise onto audio files and copy transcript files into the same location in the original folder. This kind of mimicking folder structure is essential for Wav2Letter because it only accept the folder structure of original LibriSpeech dataset.
 
 Python packages we used for noisy audio synthesis code are: `docopt`, `pydub`, `numpy`, `os`, `fnmatch`, `shutil`.
 
@@ -38,7 +38,7 @@ Language model: KenLM
 
 
 ## wav2letter Model
-This is a wrapper of [wav2letter++](https://github.com/facebookresearch/wav2letter) model by Facebook AI Research. wav2letter++] is a fast open source speech processing toolkit from the Speech Team at Facebook AI Research. It is written entirely in C++ and uses the ArrayFire tensor library and the flashlight machine learning library for maximum efficiency. Our approach is detailed in this arXiv paper.
+This is a wrapper of [wav2letter++](https://github.com/facebookresearch/wav2letter) model by Facebook AI Research. wav2letter++ is a fast open source speech processing toolkit from the Speech Team at Facebook AI Research. It is written entirely in C++ and uses the ArrayFire tensor library and the flashlight machine learning library for maximum efficiency. Our approach is detailed in this arXiv paper.
 
 Decoder: CTC + language model beam search
 
@@ -48,11 +48,3 @@ Language model: [3-gram LM](http://www.openslr.org/resources/11/3-gram.arpa.gz) 
 1. Run `Split.py` to extract and save the labels in correct format.
 2. Run `WER` to calculate the WER results from generated transcritps and labels.
 
-
-
-## WaveNet Model
-
-### Requirement
-(Correction appended to original [owner's repository](https://github.com/buriburisuri/speech-to-text-wavenet))
-
-libsndfile: check installation on [libsndfile](https://github.com/erikd/libsndfile) (`brew install libsndfile` for Mac)
