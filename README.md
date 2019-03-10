@@ -44,9 +44,6 @@ Language model: KenLM
 2. Run `WER` to calculate the WER results from generated transcritps and labels.
 
 
-
-## WaveNet Model
-
 ### Requirement
 (Correction appended to original [owner's repository](https://github.com/buriburisuri/speech-to-text-wavenet))
 
