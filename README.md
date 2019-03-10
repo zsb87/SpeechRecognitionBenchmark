@@ -35,3 +35,13 @@ Architecture from paper [Baidu's Deep Speech Paper](https://arxiv.org/abs/1412.5
 
 
 ## Wav2Letter Model
+
+
+
+
+## WaveNet Model
+
+### Requirement
+(Correction appended to original [owner's repository](https://github.com/buriburisuri/speech-to-text-wavenet))
+
+libsndfile: check installation on [libsndfile](https://github.com/erikd/libsndfile) (`brew install libsndfile` for Mac)
