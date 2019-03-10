@@ -43,8 +43,3 @@ Language model: KenLM
 1. Run `Split.py` to extract and save the labels in correct format.
 2. Run `WER` to calculate the WER results from generated transcritps and labels.
 
-
-### Requirement
-(Correction appended to original [owner's repository](https://github.com/buriburisuri/speech-to-text-wavenet))
-
-libsndfile: check installation on [libsndfile](https://github.com/erikd/libsndfile) (`brew install libsndfile` for Mac)
