@@ -5,7 +5,7 @@ A comprehensive evaluation of currently existing Automatic Speech Recognition (A
 
 
 ## Noisy Audio Synthesis
-We made a Python code that can duplicate audio dataset's folder tree structure and add noise onto audio files. 
+We made a Python code that can duplicate audio dataset's folder tree structure and add noise onto audio files and copy transcript files into the same location in the original folder. This kind of mimicking folder structure is essential for Wav2Letter because it only accept the folder structure of original LibriSpeech dataset.
 
 Python packages we used for noisy audio synthesis code are: `docopt`, `pydub`, `numpy`, `os`, `fnmatch`, `shutil`.
 
