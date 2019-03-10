@@ -36,7 +36,7 @@ Language model: KenLM
 
 
 ## wav2letter Model
-This is a wrapper of [wav2letter++](https://github.com/facebookresearch/wav2letter) model by Facebook AI Research. wav2letter++] is a fast open source speech processing toolkit from the Speech Team at Facebook AI Research. It is written entirely in C++ and uses the ArrayFire tensor library and the flashlight machine learning library for maximum efficiency. Our approach is detailed in this arXiv paper.
+This is a wrapper of [wav2letter++](https://github.com/facebookresearch/wav2letter) model by Facebook AI Research. wav2letter++ is a fast open source speech processing toolkit from the Speech Team at Facebook AI Research. It is written entirely in C++ and uses the ArrayFire tensor library and the flashlight machine learning library for maximum efficiency. Our approach is detailed in this arXiv paper.
 
 Language model: KenLM
 ### Steps:
