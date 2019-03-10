@@ -42,7 +42,7 @@ This is a wrapper of [wav2letter++](https://github.com/facebookresearch/wav2lett
 
 Decoder: CTC + language model beam search
 
-Language model: [3-gram LM](http://www.openslr.org/resources/11/3-gram.arpa.gz) trained from libriSpeech corpus
+Language model: [3-gram LM](http://www.openslr.org/resources/11/3-gram.arpa.gz) trained from LibriSpeech corpus
 
 ### Steps:
 1. Run `Split.py` to extract and save the labels in correct format.
