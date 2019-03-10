@@ -1,7 +1,7 @@
 # Speech Recognition Benchmark
 
-A comprehensive evaluation under different types and levels of environment noises using two currently existing Automatic Speech Recognition (ASR) systems.
-
+A comprehensive evaluation under different types and levels of environment noises using two popular Automatic Speech Recognition (ASR) systems - DeepSpeech and wav2letter. Our reposiory contains three parts: noisy audio synthesis, 
+a DeepSpeech model evaluation wrapper and wav2letter model wrapper.
 
 ## Noisy Audio Synthesis
 We made a Python code that can duplicate audio dataset's folder tree structure and add noise onto audio files. 
