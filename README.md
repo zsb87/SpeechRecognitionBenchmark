@@ -35,7 +35,3 @@ Architecture from paper [Baidu's Deep Speech Paper](https://arxiv.org/abs/1412.5
 
 
 ## Wav2Letter Model
-
-
-
-## WaveNet Model
