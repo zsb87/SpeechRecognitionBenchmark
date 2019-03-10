@@ -28,6 +28,8 @@ We used some free open source noise files, which were downloaded [here](http://p
 ## DeepSpeech Model
 This is a wrapper of [DeepSpeech-Mozilla](https://github.com/mozilla/DeepSpeech). Architecture is from paper [Baidu's Deep Speech Paper](https://arxiv.org/abs/1412.5567). Framework is implemented by Mozilla. We use its speech recognition inference module and added the WER result part.
 
+Decoder: CTC + language model beam search
+
 Language model: KenLM
 
 ### Steps:
@@ -38,7 +40,10 @@ Language model: KenLM
 ## wav2letter Model
 This is a wrapper of [wav2letter++](https://github.com/facebookresearch/wav2letter) model by Facebook AI Research. wav2letter++] is a fast open source speech processing toolkit from the Speech Team at Facebook AI Research. It is written entirely in C++ and uses the ArrayFire tensor library and the flashlight machine learning library for maximum efficiency. Our approach is detailed in this arXiv paper.
 
-Language model: KenLM
+Decoder: CTC + language model beam search
+
+Language model: [3-gram LM](http://www.openslr.org/resources/11/3-gram.arpa.gz) trained from libriSpeech corpus
+
 ### Steps:
 1. Run `Split.py` to extract and save the labels in correct format.
 2. Run `WER` to calculate the WER results from generated transcritps and labels.
